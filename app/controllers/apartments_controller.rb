@@ -64,8 +64,8 @@ class ApartmentsController < ApplicationController
 end
 
 class Building < ApplicationRecord
-    has_many :apartments
-    
+    has_many :apartments, dependent: :destroy #Cascade destroy
+
     def to_s
         name
     end
