@@ -1,6 +1,9 @@
 <p>Building fields</p>
 
-
+<div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+</div>
 <p>Apartment fields</p>
 <%= form.fields_for :apartments do |apartment_form| %>
     <%= apartment_form.label :number %>
