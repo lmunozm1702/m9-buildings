@@ -1,0 +1,10 @@
+<p>Building fields</p>
+
+
+<p>Apartment fields</p>
+<%= form.fields_for :apartments do |apartment_form| %>
+    <%= apartment_form.label :number %>
+    <%= apartment_form.text_field :number %>
+    <%= apartment_form.label :sale_price %>
+    <%= apartment_form.text_field :sale_price %>
+<% end %>
