@@ -1,4 +1,4 @@
-<%= form_with(model: apartment, local: true) do |form| %>
+<%= form_with(model: [@building, apartment], local: true) do |form| %>
     <% if apartment.errors.any? %>
         <div id="error_explanation">
             <h2><%= pluralize(apartment.errors.count, "error") %> 
@@ -15,12 +15,6 @@
     <div class="field">
         <%= form.label :number %>
         <%= form.text_field :number %>
-    </div>
-
-    <div class="field">
-        <%= form.label :building %>
-        <%= form.select :building_id, @buildings.map {|building| [building.name, building.id] }, 
-                                                            prompt: "Seleccione una opción..." %>
     </div>
 
     <div class="actions">

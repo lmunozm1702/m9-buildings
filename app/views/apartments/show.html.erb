@@ -1,5 +1,13 @@
-Number:
-    <%= @apartment.number %>
+<p id="notice"><%= notice %></p>
 
-Building:
-    <%= @apartment.building.to_s %>
+<p>
+    <strong>Number:</strong>
+    <%= @apartment.number %>
+</p>
+<p>
+    <strong>Building:</strong>
+    <%= @apartment.building %>
+</p>
+<%= link_to 'Edit', edit_building_apartment_path(@building, @apartment)%> |
+<%= link_to 'Back', building_apartments_path(@building) %>
+
